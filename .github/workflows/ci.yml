@@ -1,0 +1,29 @@
+name: Build projects
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.2
+
+      - name: Restore projects
+        run: |
+          Foreach ($file in Get-ChildItem -Path $env:GITHUB_WORKSPACE -Filter "*.csproj" -Recurse -Force) {
+            $name = $file.FullName
+            & msbuild "${name}" /t:Restore /p:Configuration=Release
+          }
+
+      - name: Build projects
+        run: |
+          ForEach($file in Get-ChildItem -Path $env:GITHUB_WORKSPACE -Filter "*.csproj" -Recurse -Force) {
+            $name = $file.FullName
+            & msbuild "${name}" /p:Configuration=Release
+          }
