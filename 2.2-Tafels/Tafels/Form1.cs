@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tafels
@@ -39,11 +32,8 @@ namespace Tafels
 
             txtTafel.Text = "";
 
-            decimal num = decimal.Parse(txtGetal.Text);
-            for (int i = 1; i < 11; i++)
-            {
-                txtTafel.AppendText($"{i} * {num} = {i * num}" + System.Environment.NewLine);
-            }
+            var num = decimal.Parse(txtGetal.Text);
+            for (var i = 1; i < 11; i++) txtTafel.AppendText($"{i} * {num} = {i * num}" + Environment.NewLine);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
