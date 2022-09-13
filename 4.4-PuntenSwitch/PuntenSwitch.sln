@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuntenSwitch", "PuntenSwitch\PuntenSwitch.csproj", "{AF97949B-E705-4C17-9634-C37C7B45C657}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF97949B-E705-4C17-9634-C37C7B45C657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF97949B-E705-4C17-9634-C37C7B45C657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF97949B-E705-4C17-9634-C37C7B45C657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF97949B-E705-4C17-9634-C37C7B45C657}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77AAAE94-B272-46D9-9370-A4DEE8BF47A4}
+	EndGlobalSection
+EndGlobal
